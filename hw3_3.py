@@ -64,7 +64,7 @@ class MoveHere():
 
         # Twist 메시지 구성
         cmd = Twist()
-        cmd.linear.x = min(lin_output, 1.5)  # 속도 제한
+        cmd.linear.x = lin_output
         cmd.angular.z = ang_output
         self.pub.publish(cmd)
 
